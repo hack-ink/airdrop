@@ -1,0 +1,28 @@
+[package]
+authors    = ["Xavier Lau <xavier@inv.cafe>"]
+edition    = "2021"
+license    = "GPL-3.0"
+name       = "airdrop"
+repository = "https://github.com/hack-ink/airdrop"
+version    = "0.1.0"
+
+[dependencies]
+# async
+async-std          = { version = "1.11", features = ["attributes", "tokio1"] }
+futures            = { version = "0.3" }
+reqwest            = { version = "0.11", features = ["rustls-tls", "json"] }
+tracing            = { version = "0.1" }
+tracing-subscriber = { version = "0.3" }
+
+# ethereum
+ethabi      = { version = "17.0" }
+secp256k1   = { version = "0.21", features = ["rand-std"] }
+tiny-keccak = { version = "2.0" }
+web3        = { version = "0.19", git = "https://github.com/tomusdrw/rust-web3", default-features = false, features = ["http-rustls-tls", "signing"] }
+
+# searlzation
+serde_json = { version = "1.0" }
+
+# util
+anyhow      = { version = "1.0" }
+array-bytes = { version = "1.5" }
