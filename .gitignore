@@ -12,3 +12,6 @@ target
 package-lock.json
 node_modules
 build
+
+# Secret
+eth-accounts
