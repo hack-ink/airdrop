@@ -91,15 +91,15 @@ pub async fn farm() -> AnyResult<()> {
 
 	// Acquire SDN.
 	// Can not turn on while you are `farm`ing.
-	// loop {
-	// 	drip(256);
-	// }
+	loop {
+		drip(64).await;
+	}
 
 	// Farm.
-	for account in EthAccount::load()? {
-		tracing::info!("account {}", account.address);
-		interact_contract(&account).await?;
-	}
+	// for account in EthAccount::load()? {
+	// 	tracing::info!("account {}", account.address);
+	// 	interact_contract(&account).await?;
+	// }
 
 	Ok(())
 }
