@@ -32,6 +32,7 @@ pub async fn zap_in(
 	.await
 }
 
+// https://blockscout.com/shiden/address/0x456C0082DE0048EE883881fF61341177FA1FEF40/transactions
 pub async fn approve_kaco_lp(
 	api: &EthApi,
 	account: &EthAccount,
@@ -61,6 +62,7 @@ pub async fn approve_kaco_lp(
 	.await
 }
 
+// https://blockscout.com/shiden/address/0x9A6080753a35dCd8e77102aE83A93170A831393e/transactions
 pub async fn deposit_a_vault(
 	api: &EthApi,
 	account: &EthAccount,
